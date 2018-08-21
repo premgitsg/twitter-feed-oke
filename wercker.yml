@@ -24,7 +24,7 @@ push-release:
         working-dir: /pipeline/source
         ports: $PORT
         cmd: sh target/bin/start
-- bash-template
+
 
 deploy-to-cluster:
     box:
