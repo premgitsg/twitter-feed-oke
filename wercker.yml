@@ -12,7 +12,7 @@ build:
     - script:
         name: maven build
         code: mvn clean assembly:assembly
-#Push the docker image with our b uilt and tested application to the Oracle Container Registry
+#Push the docker image with our built and tested application to the Oracle Container Registry
 push-release:
   steps:
     - internal/docker-push:
@@ -24,6 +24,7 @@ push-release:
         working-dir: /pipeline/source
         ports: $PORT
         cmd: sh target/bin/start
+- bash-template
 
 deploy-to-cluster:
     box:
